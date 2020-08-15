@@ -147,4 +147,218 @@ span {
     visibility: hidden;
   }
 }
+
+.header {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+
+#particles-js {
+  height: 100vh;
+  width: 100%;
+  background: #4F4F50;
+  z-index: -1;
+  position: absolute;
+}
+
+.nav {
+  background-color: #121212;
+  height: 8vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.nav .logo {
+  height: 100%;
+}
+
+.nav .logo img {
+  height: 100%;
+}
+
+.nav .nav-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 70%;
+  font-family: var(--secondary-font);
+  font-size: 2.4rem;
+  list-style: none;
+  margin-bottom: 0;
+}
+
+.nav .nav-links a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: bold;
+}
+
+.nav .nav-links a.active, .nav .nav-links a:hover {
+  color: #fff;
+}
+
+.nav .hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.nav .hamburger div {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  margin-bottom: 5px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.nav .hamburger div:nth-child(3) {
+  margin-bottom: 0;
+}
+
+@media screen and (max-width: 992px) {
+  body {
+    overflow-x: hidden;
+  }
+  .nav-links {
+    position: absolute;
+    right: 0px;
+    height: 92vh;
+    top: 8vh;
+    background: url("../img/mobile-bg.svg") no-repeat center center;
+    background-size: cover;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100% !important;
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+    -webkit-transition: all 0.5s ease-in;
+    transition: all 0.5s ease-in;
+  }
+  .nav-links li {
+    opacity: 0;
+  }
+  .hamburger {
+    display: block !important;
+  }
+}
+
+.nav-active {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(50px);
+            transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(50px);
+            transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+.toggle .line1 {
+  -webkit-transform: rotate(-45deg) translate(-5px, 6px);
+          transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+  opacity: 0;
+}
+
+.toggle .line3 {
+  -webkit-transform: rotate(45deg) translate(-5px, -6px);
+          transform: rotate(45deg) translate(-5px, -6px);
+}
+
+.info-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 70vh;
+  position: absolute;
+  top: 53%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: transparent;
+  position: relative;
+}
+
+.info-content .info-title-box {
+  position: absolute;
+  left: 200px;
+  top: 25%;
+}
+
+.info-content .info-title {
+  font-weight: bold;
+  font-size: 96px;
+  line-height: 128px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.info-content .info-subtitle {
+  color: #fff;
+  font-size: 48px;
+  line-height: 64px;
+  margin-bottom: 0;
+}
+
+.info-content .info-img-box {
+  height: 100%;
+  margin-left: auto;
+  padding-right: 200px;
+}
+
+.info-content .info-img-box .info-img {
+  height: 100%;
+}
 /*# sourceMappingURL=style.css.map */
